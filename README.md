@@ -24,7 +24,7 @@
 4. Import the **cinevault.sql** file.
 5. Open **includes/db.php** and change the database password from `''` to `'root'`.
 
----
+
 
 ### 2. Copy the Project Files
 
@@ -36,7 +36,7 @@
 
   `/Applications/MAMP/htdocs/`
 
----
+
 
 ### 3. Run the Project
 
@@ -47,7 +47,7 @@ Open your browser and use the appropriate URL:
 
 If everything has been configured correctly, the CineVault home page should load successfully.
 
----
+
 
 # Project Structure
 
@@ -73,7 +73,7 @@ cinevault/
     └── account.php        User profile and settings
 ```
 
----
+
 
 # Main Features
 
@@ -91,7 +91,7 @@ The CineVault application includes the following features developed for Assessme
 * Save favourite movies to a personal favourites list.
 * An account page where users can update their profile, change their password, and manage their reviews.
 
----
+
 
 # Technologies Used
 

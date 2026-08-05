@@ -1,0 +1,766 @@
+/* CineVault - Estilos principais */
+/* Feito por Marcella Galiotti e Cristina Tenorio */
+/* Cores: preto, vermelho e bege */
+
+/* Resetar margens e padding de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores principais do site */
+:root {
+    --preto: #0a0a0a;
+    --vermelho: #c0392b;
+    --bege: #e8d5b7;
+    --branco: #ffffff;
+    --cinza: #888888;
+    --card: #1a1a1a;
+    --borda: #2a2a2a;
+}
+
+/* Corpo da pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    min-height: 100vh;
+}
+
+/* Links sem sublinhado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #111111;
+    border-bottom: 2px solid var(--vermelho);
+    padding: 15px 20px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo do site */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bege);
+}
+
+/* Links de navegacao */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.nav-links a {
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: var(--bege);
+}
+
+/* Dropdown do genre */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111111;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    min-width: 140px;
+    z-index: 100;
+}
+
+/* Mostrar dropdown quando passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--vermelho);
+}
+
+/* Botoes de login e cadastro */
+.nav-auth {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* ===== BOTOES ===== */
+.btn-primary {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #e74c3c;
+}
+
+.btn-outline {
+    border: 1px solid var(--bege);
+    color: var(--bege);
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background-color: var(--bege);
+    color: var(--preto);
+}
+
+/* Botao que ocupa a largura toda */
+.btn-full {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+}
+
+/* ===== HERO (secao principal da home) ===== */
+.hero {
+    background-color: #1a0000;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--borda);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--bege);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--cinza);
+    margin-bottom: 25px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* ===== BARRA DE BUSCA ===== */
+.search-bar-wrap {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    display: flex;
+    gap: 8px;
+}
+
+.search-bar-wrap input {
+    flex: 1;
+    padding: 12px 16px;
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    color: var(--branco);
+    font-size: 0.95rem;
+}
+
+.search-bar-wrap input:focus {
+    outline: none;
+    border-color: var(--vermelho);
+}
+
+.search-bar-wrap button {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== FILTRO DE GENERO ===== */
+.genre-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.genre-pill {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--borda);
+    background-color: var(--card);
+    color: var(--branco);
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.genre-pill:hover, .genre-pill.active {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+/* ===== SECOES ===== */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    color: var(--bege);
+}
+
+.section-header a {
+    color: var(--vermelho);
+    font-size: 0.9rem;
+}
+
+/* ===== GRID DE FILMES ===== */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Card de cada filme */
+.movie-card {
+    background-color: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.movie-card-body {
+    padding: 12px;
+}
+
+.movie-card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    /* Cortar texto longo com reticencias */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card-meta {
+    font-size: 0.78rem;
+    color: var(--cinza);
+    margin-bottom: 8px;
+}
+
+/* Estrelas amarelas */
+.movie-card-rating {
+    color: #f1c40f;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+/* ===== PAGINA DE DETALHES DO FILME ===== */
+.detail-hero {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+}
+
+.detail-poster img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Quando nao tem poster */
+.detail-poster-placeholder {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-color: var(--card);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.detail-info h1 {
+    font-size: 2.5rem;
+    color: var(--bege);
+    margin-bottom: 10px;
+}
+
+/* Rating com estrelas e numero */
+.detail-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.detail-rating .rating-num {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.detail-rating .rating-count {
+    color: var(--cinza);
+    font-size: 0.85rem;
+}
+
+/* Tags de genero, ano, duracao */
+.detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.detail-meta span {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.detail-meta .genre-tag {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+.detail-desc {
+    color: #cccccc;
+    line-height: 1.7;
+    margin: 16px 0;
+}
+
+/* Diretor e elenco */
+.detail-credits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.detail-credit label {
+    font-size: 0.75rem;
+    color: var(--cinza);
+    text-transform: uppercase;
+}
+
+/* ===== FORMULARIO DE REVIEW ===== */
+.review-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.review-box {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.review-box h2 {
+    color: var(--bege);
+    margin-bottom: 20px;
+}
+
+/* Seletor de estrelas */
+.star-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.star-selector input[type=radio] {
+    display: none;
+}
+
+.star-selector label {
+    font-size: 2rem;
+    color: var(--borda);
+    cursor: pointer;
+}
+
+.star-selector label:hover,
+.star-selector input:checked + label {
+    color: #f1c40f;
+}
+
+/* Lista de reviews */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.review-item {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.review-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.review-date {
+    color: var(--cinza);
+    font-size: 0.78rem;
+}
+
+.review-comment {
+    color: #cccccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ===== PAGINAS DE LOGIN E CADASTRO ===== */
+.form-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.form-card {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 36px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.form-card h2 {
+    color: var(--bege);
+    margin-bottom: 6px;
+    font-size: 1.8rem;
+}
+
+.form-card .form-sub {
+    color: var(--cinza);
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+}
+
+/* Cada campo do formulario */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--cinza);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 11px 14px;
+    background-color: #111111;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    color: var(--branco);
+    font-size: 0.95rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--vermelho);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--cinza);
+}
+
+.form-footer a {
+    color: var(--bege);
+}
+
+/* Mensagens de erro e sucesso */
+.alert {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+}
+
+.alert-error {
+    background-color: #2d0000;
+    border: 1px solid var(--vermelho);
+    color: #ff8080;
+}
+
+.alert-success {
+    background-color: #002d10;
+    border: 1px solid #27ae60;
+    color: #80ff80;
+}
+
+/* ===== PAGINA DE CONTA ===== */
+.account-layout {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 30px;
+}
+
+/* Menu lateral */
+.account-sidebar {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+}
+
+/* Avatar com a primeira letra do nome */
+.account-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.account-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.account-email {
+    font-size: 0.8rem;
+    color: var(--cinza);
+    margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: var(--vermelho);
+}
+
+/* Conteudo principal da conta */
+.account-content {
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.account-content h2 {
+    color: var(--bege);
+    margin-bottom: 20px;
+}
+
+/* Cada review na conta do usuario */
+.account-review-item {
+    border-bottom: 1px solid var(--borda);
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 16px;
+}
+
+.account-review-item:last-child {
+    border-bottom: none;
+}
+
+.account-review-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Botoes pequenos */
+.btn-sm {
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: transparent;
+    border: 1px solid var(--bege);
+    color: var(--bege);
+    cursor: pointer;
+}
+
+/* ===== BOTAO DE FAVORITO ===== */
+.fav-btn {
+    background: transparent;
+    border: 1px solid var(--borda);
+    color: var(--branco);
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.fav-btn.active, .fav-btn:hover {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+/* ===== ESTRELAS ===== */
+.stars { color: #f1c40f; }
+.stars-empty { color: var(--borda); }
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #111111;
+    border-top: 1px solid var(--borda);
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--bege);
+}
+
+.footer-container p {
+    color: var(--cinza);
+    font-size: 0.85rem;
+    margin: 8px 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.footer-links a {
+    color: var(--cinza);
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: var(--bege);
+}
+
+/* ===== ESTADO VAZIO (quando nao tem nada pra mostrar) ===== */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--cinza);
+}
+
+.empty-state .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    color: var(--branco);
+    margin-bottom: 8px;
+}
+
+/* ===== RESPONSIVO (telas menores, tipo celular) ===== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .detail-hero { grid-template-columns: 1fr; }
+    .account-layout { grid-template-columns: 1fr; }
+    .movies-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    .nav-links { display: none; }
+}

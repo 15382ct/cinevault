@@ -1,86 +1,101 @@
-# CineVault 🎬
-**Movie Review Web Application**  
-INT1059 Advanced Web — Assessment 2  
-Marcella Galiotti & Cristina Tenorio
+# CineVault
 
----
+## Movie Review Web Application
+
+**INT1059 Advanced Web – Assessment 2**
+**Marcella Galiotti & Cristina Tenorio**
 
 ## Setup Instructions
 
 ### 1. Import the Database
 
-**XAMPP (Windows — Marcella):**
-1. Open XAMPP Control Panel → Start Apache + MySQL
-2. Go to `http://localhost/phpmyadmin`
-3. Click **New** → create database named `cinevault`
-4. Click **Import** → select `cinevault.sql` → click Go
+#### Windows (XAMPP – Marcella)
 
-**MAMP (Mac — Cristina):**
-1. Open MAMP → Start Servers
-2. Go to `http://localhost:8888/phpmyadmin` (or click "Open WebStart page")
-3. Click **New** → create database named `cinevault`
-4. Click **Import** → select `cinevault.sql` → click Go
-5. In `includes/db.php`, change `DB_PASS` from `''` to `'root'`
+1. Open the **XAMPP Control Panel** and start **Apache** and **MySQL**.
+2. Open **http://localhost/phpmyadmin** in your browser.
+3. Create a new database called **cinevault**.
+4. Click **Import**, select the **cinevault.sql** file, and then click **Go**.
 
----
+#### Mac (MAMP – Cristina)
 
-### 2. Copy Project Files
-
-**XAMPP:** Copy the `cinevault` folder to `C:/xampp/htdocs/`  
-**MAMP:** Copy the `cinevault` folder to `/Applications/MAMP/htdocs/`
+1. Open **MAMP** and click **Start Servers**.
+2. Open **http://localhost:8888/phpmyadmin** (or use the WebStart page).
+3. Create a new database called **cinevault**.
+4. Import the **cinevault.sql** file.
+5. Open **includes/db.php** and change the database password from `''` to `'root'`.
 
 ---
 
-### 3. Open in Browser
+### 2. Copy the Project Files
 
-**XAMPP:** `http://localhost/cinevault`  
-**MAMP:** `http://localhost:8888/cinevault`
+* **XAMPP:** Copy the **cinevault** folder into:
+
+  `C:/xampp/htdocs/`
+
+* **MAMP:** Copy the **cinevault** folder into:
+
+  `/Applications/MAMP/htdocs/`
 
 ---
 
-## Project Structure
+### 3. Run the Project
 
-```
+Open your browser and use the appropriate URL:
+
+* **XAMPP:** `http://localhost/cinevault`
+* **MAMP:** `http://localhost:8888/cinevault`
+
+If everything has been configured correctly, the CineVault home page should load successfully.
+
+---
+
+# Project Structure
+
+```text
 cinevault/
-├── index.php              ← Home page
-├── cinevault.sql          ← Database (import this)
+├── index.php              Home page
+├── cinevault.sql          Database file
 ├── css/
-│   └── style.css          ← Main stylesheet
+│   └── style.css          Main stylesheet
 ├── js/
-│   └── main.js            ← JavaScript
+│   └── main.js            JavaScript functionality
 ├── includes/
-│   ├── db.php             ← Database connection + session
-│   ├── header.php         ← Navigation bar
-│   └── footer.php         ← Footer
+│   ├── db.php             Database connection and session
+│   ├── header.php         Navigation bar
+│   └── footer.php         Footer
 └── pages/
-    ├── movie.php          ← Movie detail + reviews
-    ├── search.php         ← Browse + search + genre filter
-    ├── login.php          ← User login
-    ├── register.php       ← User registration
-    ├── logout.php         ← Logout
-    ├── favourites.php     ← User favourites list
-    └── account.php        ← User account + settings
+    ├── movie.php          Movie details and reviews
+    ├── search.php         Search and genre filtering
+    ├── login.php          User login
+    ├── register.php       User registration
+    ├── logout.php         Logout
+    ├── favourites.php     Favourite movies
+    └── account.php        User profile and settings
 ```
 
 ---
 
-## Features Implemented (Assessment 2)
+# Main Features
 
-- [x] Live dataset — 20 movies in MySQL database
-- [x] Home page with random featured movies
-- [x] Movie detail page (title, image, description, metadata)
-- [x] User registration with password hashing
-- [x] User login with session management
-- [x] Star rating system (1–5 stars)
-- [x] Written reviews (submit, update)
-- [x] Search by title / director
-- [x] Genre filter
-- [x] Favourites list per user
-- [x] Account page (view/delete reviews, edit profile/password)
+The CineVault application includes the following features developed for Assessment 2:
 
-## Tech Stack
+* A MySQL database containing 20 movies.
+* A home page that displays featured movies randomly.
+* A movie details page with descriptions, posters, genres, release year, and reviews.
+* User registration with securely hashed passwords.
+* Login and logout using PHP session management.
+* A 1–5 star rating system for movie reviews.
+* Users can write and update their own reviews.
+* Search movies by title or director.
+* Filter movies by genre.
+* Save favourite movies to a personal favourites list.
+* An account page where users can update their profile, change their password, and manage their reviews.
 
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** PHP
-- **Database:** MySQL
-- **Tools:** XAMPP / MAMP, GitHub, Figma, Google Docs
+---
+
+# Technologies Used
+
+* **Frontend:** HTML5, CSS3, JavaScript
+* **Backend:** PHP
+* **Database:** MySQL
+* **Development Tools:** XAMPP, MAMP, GitHub, Figma, and Google Docs
